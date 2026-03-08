@@ -52,9 +52,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        diamond: {
+          DEFAULT: "hsl(var(--diamond))",
+          foreground: "hsl(var(--diamond-foreground))",
+          bg: "hsl(var(--diamond-bg))",
+          glow: "hsl(var(--diamond-glow))",
+        },
         orange: {
           DEFAULT: "#FF5E00",
-          glow: "rgba(255, 94, 0, 0.2)",
+          glow: "rgba(255, 94, 0, 0.25)",
           deep: "#CC4A00",
         },
         success: "#22C55E",
@@ -85,10 +91,6 @@ export default {
         },
         "fade-in-up": {
           "0%": { opacity: "0", transform: "translateY(20px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        "count-up": {
-          "0%": { opacity: "0", transform: "translateY(10px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
       },
