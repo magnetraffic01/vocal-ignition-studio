@@ -32,11 +32,12 @@ const ComparisonTable = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <table className="w-full min-w-[700px] text-sm">
+        <table className="w-full min-w-[800px] text-sm">
           <thead>
             <tr className="border-b border-border">
               <th className="text-left font-sub text-foreground py-3 px-2">Feature</th>
-              <th className="text-center font-sub text-foreground py-3 px-2">Basic $35</th>
+              <th className="text-center font-sub text-foreground py-3 px-2">Stock $35</th>
+              <th className="text-center font-sub text-foreground py-3 px-2">Waves $50</th>
               <th className="text-center font-sub text-foreground py-3 px-2">Pro $100</th>
               <th className="text-center font-sub text-foreground py-3 px-2">Premium+ $350</th>
               <th className="text-center font-sub py-3 px-2 text-diamond" style={{ background: "rgba(184,169,201,0.08)" }}>💎 Diamond $500</th>
@@ -46,7 +47,8 @@ const ComparisonTable = () => (
             {features.map((f) => (
               <tr key={f.label} className="border-b border-border/50">
                 <td className="text-left text-foreground font-body py-2.5 px-2">{f.label}</td>
-                <td className="text-center py-2.5 px-2"><Cell value={f.basic} /></td>
+                <td className="text-center py-2.5 px-2"><Cell value={f.stock} /></td>
+                <td className="text-center py-2.5 px-2"><Cell value={f.waves} /></td>
                 <td className="text-center py-2.5 px-2"><Cell value={f.pro} /></td>
                 <td className="text-center py-2.5 px-2"><Cell value={f.premium} /></td>
                 <td className="text-center py-2.5 px-2" style={{ background: "rgba(184,169,201,0.04)" }}><Cell value={f.diamond} /></td>
