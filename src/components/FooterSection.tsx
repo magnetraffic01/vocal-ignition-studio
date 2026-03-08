@@ -1,23 +1,77 @@
 const FooterSection = () => (
-  <footer className="border-t border-border py-12">
+  <footer className="border-t border-border py-16">
     <div className="container mx-auto px-6">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-        <div>
-          <h3 className="font-display text-2xl text-primary">VocalForge</h3>
-          <p className="text-muted-foreground text-sm font-body mt-1">
-            Engineer-Built Vocal Templates for FL Studio.
-          </p>
-        </div>
-        <div className="flex gap-6 text-sm font-sub text-muted-foreground">
-          <a href="#pricing" className="hover:text-primary transition-colors">Pricing</a>
-          <a href="#how-it-works" className="hover:text-primary transition-colors">How It Works</a>
-          <a href="#faq" className="hover:text-primary transition-colors">FAQ</a>
+      {/* Newsletter */}
+      <div className="text-center mb-12 pb-12 border-b border-border">
+        <h3 className="font-display text-3xl mb-2">Get free vocal tips + new template drops</h3>
+        <div className="flex gap-2 max-w-md mx-auto mt-4">
+          <input
+            type="email"
+            placeholder="Your email"
+            className="flex-1 bg-secondary border border-border rounded-lg px-4 py-2.5 text-foreground font-body text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
+          />
+          <button className="cta-lift bg-primary text-primary-foreground font-sub font-bold text-sm px-5 py-2.5 rounded-lg">
+            Subscribe →
+          </button>
         </div>
       </div>
-      <div className="section-divider my-6" />
-      <p className="text-center text-xs text-muted-foreground font-body">
-        © {new Date().getFullYear()} VocalForge. All rights reserved. FL Studio is a trademark of Image-Line. Waves is a trademark of Waves Audio.
-      </p>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        {/* Brand */}
+        <div>
+          <h3 className="font-display text-2xl text-primary mb-2">ZvocalShop</h3>
+          <p className="text-muted-foreground text-sm font-body mb-3">
+            Engineer-built FL Studio vocal templates for independent artists. Sound professional from day one.
+          </p>
+          <p className="text-muted-foreground text-xs font-body italic">
+            ZvocalShop is not affiliated with Image-Line, Waves Audio Ltd., or Focusrite plc.
+            All third-party product names are the property of their respective owners.
+          </p>
+        </div>
+
+        {/* Templates */}
+        <div>
+          <h4 className="font-sub text-sm uppercase tracking-wider text-foreground mb-3">Templates</h4>
+          <ul className="space-y-2 text-sm font-body text-muted-foreground">
+            <li><a href="#pricing" className="hover:text-primary transition-colors">Basic — $50</a></li>
+            <li><a href="#pricing" className="hover:text-primary transition-colors">Pro — $100</a></li>
+            <li><a href="#pricing" className="hover:text-primary transition-colors">Premium Plus — $350</a></li>
+            <li><a href="#diamond" className="hover:text-diamond transition-colors text-diamond">Diamond — $500 💎</a></li>
+          </ul>
+        </div>
+
+        {/* Resources */}
+        <div>
+          <h4 className="font-sub text-sm uppercase tracking-wider text-foreground mb-3">Resources</h4>
+          <ul className="space-y-2 text-sm font-body text-muted-foreground">
+            <li>
+              <a href="https://www.waves.com/downloads/central" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                Download Waves Central
+              </a>
+            </li>
+            <li><a href="#how-it-works" className="hover:text-primary transition-colors">How It Works</a></li>
+            <li><a href="#faq" className="hover:text-primary transition-colors">FAQ</a></li>
+            <li><a href="#zip-tree" className="hover:text-primary transition-colors">What's in the .zip</a></li>
+          </ul>
+        </div>
+
+        {/* Company */}
+        <div>
+          <h4 className="font-sub text-sm uppercase tracking-wider text-foreground mb-3">Company</h4>
+          <ul className="space-y-2 text-sm font-body text-muted-foreground">
+            <li><a href="#" className="hover:text-primary transition-colors">About</a></li>
+            <li><a href="#" className="hover:text-primary transition-colors">Contact</a></li>
+            <li><a href="#" className="hover:text-primary transition-colors">Refund Policy</a></li>
+            <li><a href="#" className="hover:text-primary transition-colors">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="section-divider mb-6" />
+      <div className="flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-muted-foreground font-body">
+        <p>© {new Date().getFullYear()} ZvocalShop. All rights reserved.</p>
+        <p>Built for independent artists. FL Studio 20 and above.</p>
+      </div>
     </div>
   </footer>
 );

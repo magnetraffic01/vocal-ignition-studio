@@ -1,81 +1,88 @@
 import { motion } from "framer-motion";
 import { Check, X } from "lucide-react";
-import WavesNotice from "./WavesNotice";
 
 const tiers = [
   {
     name: "Basic",
     price: "$50",
+    originalPrice: "$97",
+    savings: "You save $47",
     badge: "START HERE",
-    badgeClass: "bg-muted text-foreground",
+    badgeClass: "border border-primary text-primary",
     popular: false,
     headline: "Your Vocals. Plug In. Record.",
-    subline: "Everything you need to start recording — raw and ready.",
+    subline: "Raw and ready. Zero fluff. Just the chain, the routing, and you.",
+    wavesNote: "Waves subscription required (~$13.99/mo). Total estimated first month: ~$64.",
     included: [
-      "1 Main Vocal Chain (.flp mixer template)",
-      "1 Dubs (Doubles) Vocal Chain",
-      "1 Adlibs Vocal Chain",
-      "All chains are UNMIXED / DRY (pure routing)",
-      "Compatible: FL Studio 20+ (incl. FL Studio 2025)",
-      "Waves V14 + V15 routing pre-wired",
-      "Instant digital download (.zip)",
-      "Basic setup README text file included",
+      "1 Main Vocal Chain (.flp — unmixed/dry routing)",
+      "1 Dubs Vocal Chain",
+      "1 Adlib Vocal Chain",
+      "FL Studio 20 and above compatible",
+      "Waves V14 & V15 pre-wired routing",
+      "Instant .zip download",
+      "Basic README setup file",
     ],
     excluded: [
-      "No mixing or processing applied",
-      "No instructions or tutorials",
-      "No personalized support",
+      "Mixed/processed chains",
+      "PDF setup instructions",
+      "1-on-1 live class",
     ],
-    bestFor: "Producers who already know FL Studio and just need a clean starting chain — no fluff, just routing.",
     cta: "Get Basic — $50 →",
-    totalCost: "~$64 first month (incl. ~$14/mo Waves)",
   },
   {
     name: "Pro",
     price: "$100",
-    badge: "MOST POPULAR",
+    originalPrice: "$197",
+    savings: "You save $97",
+    badge: "⭐ MOST POPULAR",
     badgeClass: "bg-primary text-primary-foreground",
     popular: true,
     headline: "Three Adlib Flavors. Two Dub Chains. Instructions Included.",
-    subline: "A full vocal architecture — built for artists who want options.",
+    subline: "A full vocal architecture with multiple chain options and a clear PDF guide to get everything working the same day you download it.",
+    wavesNote: "Waves subscription required (~$13.99/mo). Total estimated first month: ~$114.",
     included: [
-      "1 Main Vocal Chain (.flp mixer template, unmixed)",
-      "3 Adlib Vocal Chains (Short & punchy · Wide & airy · Dark & low-end)",
-      "2 Dub (Doubles) Vocal Chains (tight + wide double)",
-      "Compatible: FL Studio 20+ (incl. FL Studio 2025)",
-      "Waves V14 + V15 routing pre-wired",
-      "Instant digital download (.zip)",
-      "Step-by-Step PDF Setup Guide included",
-      "Written walkthrough for every chain explaining each plugin",
+      "1 Main Vocal Chain (.flp — unmixed)",
+      "3 Adlib Chains: Short & Punchy · Wide & Airy · Dark & Low-End",
+      "2 Dub Chains: Tight Double + Wide Stereo Double",
+      "FL Studio 20 and above compatible",
+      "Waves V14 & V15 pre-wired routing",
+      "Instant .zip download",
+      "PDF Setup Guide (install, route, troubleshoot, plugin explanations)",
     ],
-    excluded: [],
-    bestFor: "Artists who want a full vocal session setup with multiple chain options and clear instructions to get it working the same day.",
+    excluded: [
+      "Mixed/processed chains",
+      "1-on-1 live class",
+    ],
     cta: "Get Pro — $100 →",
-    totalCost: "~$114 first month (incl. ~$14/mo Waves)",
   },
   {
     name: "Premium Plus",
     price: "$350",
-    badge: "ALL-INCLUSIVE",
-    badgeClass: "bg-accent text-accent-foreground",
+    originalPrice: "$597",
+    savings: "You save $247",
+    badge: "🔥 ALL-INCLUSIVE",
+    badgeClass: "bg-gradient-to-r from-primary to-orange-deep text-primary-foreground",
     popular: false,
-    headline: "3 Mixed Mains. Master Channel. Live 1-on-1 Class. Done.",
-    subline: "We don't just give you the template. We build it with you and teach you how to use it — in one live session.",
+    headline: "3 Mixed Mains. Master Channel. Live Engineer. One Hour.",
+    subline: "We don't just give you the template. We build the session with you live and teach you how to use it — one-on-one.",
+    wavesNote: "Waves subscription required (~$13.99/mo). Total estimated first month: ~$364.",
     included: [
-      "3 Main Vocal Plugin Chains — FULLY MIXED & PROCESSED",
+      "3 Main Vocal Chains — FULLY MIXED & PROCESSED",
       "Chain 1: Trap/Hip-Hop (dark, saturated, compressed)",
       "Chain 2: R&B/Pop (smooth, wide, airy)",
-      "Chain 3: Drill/Melodic (aggressive, distorted, tuned)",
-      "1 Master Channel Plugin Chain (final mix bus)",
-      "2 Dub (Doubles) Chains (pre-mixed, stereo-spread)",
-      "4 Adlib Chains (Short · Whisper · Hype · Melodic)",
-      "Live 1-on-1 setup session via video call",
-      "Lifetime support & future template updates",
+      "Chain 3: Drill/Melodic (aggressive, distorted edges)",
+      "1 Master Channel Plugin Chain (mix bus processing)",
+      "4 Adlib Chains: Short · Whisper · Hype · Melodic",
+      "2 Dub Chains — pre-mixed, stereo-spread ready",
+      "FL Studio 20 and above compatible",
+      "Waves V14 & V15 pre-wired and pre-mixed",
+      "Organized .zip download — labeled folder structure",
+      "Complete PDF Setup Guide",
+      "LIVE 1-on-1 CLASS — 1 Hour via Zoom",
+      "Calendly booking link sent immediately after purchase",
     ],
     excluded: [],
-    bestFor: "Artists who want everything done — fully mixed templates, a master chain, and a live session so you know exactly how to use it all.",
     cta: "Get Premium Plus — $350 →",
-    totalCost: "~$364 first month (incl. ~$14/mo Waves)",
   },
 ];
 
@@ -88,10 +95,10 @@ const PricingSection = () => (
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <p className="font-sub text-primary uppercase tracking-widest text-sm mb-2">Choose Your Template</p>
-        <h2 className="font-display text-5xl md:text-6xl">Pick Your Path</h2>
+        <p className="font-sub text-primary uppercase tracking-widest text-sm mb-2">Pricing</p>
+        <h2 className="font-display text-5xl md:text-6xl">Pick Your Tier.</h2>
         <p className="text-muted-foreground font-body mt-4 max-w-xl mx-auto">
-          Every hero needs the right tools. Choose the tier that matches where you are — and where you're headed.
+          One-time purchase. Instant download. FL Studio 20 and above.
         </p>
       </motion.div>
 
@@ -115,10 +122,19 @@ const PricingSection = () => (
                 ⭐ MOST POPULAR
               </span>
             )}
+
+            <div className="mb-2">
+              <span className="text-muted-foreground line-through text-sm font-body mr-2">{tier.originalPrice}</span>
+              <span className="text-primary font-sub text-xs font-bold">{tier.savings}</span>
+            </div>
             <h3 className="font-display text-4xl mb-1">{tier.price}</h3>
             <p className="text-muted-foreground text-xs mb-4 font-body">one-time payment</p>
             <h4 className="font-sub text-lg text-foreground mb-1">{tier.headline}</h4>
-            <p className="text-muted-foreground text-sm mb-6 font-body">{tier.subline}</p>
+            <p className="text-muted-foreground text-sm mb-4 font-body">{tier.subline}</p>
+
+            <div className="bg-primary/10 border border-primary/20 rounded-md p-3 mb-6 text-xs text-muted-foreground font-body">
+              ⚠ {tier.wavesNote}
+            </div>
 
             <ul className="space-y-2 mb-6">
               {tier.included.map((item) => (
@@ -140,25 +156,12 @@ const PricingSection = () => (
               </ul>
             )}
 
-            <p className="text-xs text-muted-foreground mb-4 font-body italic">
-              Best for: {tier.bestFor}
-            </p>
-            <p className="text-xs text-muted-foreground mb-4 font-body">
-              Est. total: {tier.totalCost}
-            </p>
-
             <button className="cta-lift w-full bg-primary text-primary-foreground font-sub font-bold py-3 rounded-lg text-base">
               {tier.cta}
             </button>
           </motion.div>
         ))}
       </div>
-
-      <p className="text-center text-xs text-muted-foreground mt-6 font-body">
-        After first month, only the Waves subscription renews at ~$14/mo.
-      </p>
-
-      <WavesNotice />
     </div>
   </section>
 );
