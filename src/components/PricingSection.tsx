@@ -1,15 +1,12 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Check, X } from "lucide-react";
 
-const tiers = [
-  {
-    name: "Basic Stock",
+const basicVariants = {
+  stock: {
     price: "$35",
     originalPrice: "$70",
     savings: "You save $35",
-    badge: "FL STOCK ONLY",
-    badgeClass: "border border-primary text-primary",
-    popular: false,
     headline: "FL Stock Plugins Only. No Extras Needed.",
     subline: "Built entirely with FL Studio's built-in stock plugins — no third-party subscriptions required.",
     wavesNote: "Uses only FL Studio stock plugins — no Waves® or third-party plugins needed.",
@@ -31,16 +28,12 @@ const tiers = [
     ],
     cta: "Get Basic Stock — $35 →",
   },
-  {
-    name: "Basic Waves",
+  waves: {
     price: "$50",
     originalPrice: "$97",
     savings: "You save $47",
-    badge: "WAVES POWERED",
-    badgeClass: "border border-primary text-primary",
-    popular: false,
     headline: "Your Vocals. Plug In. Record.",
-    subline: "Same routing as Basic Stock — but engineered with Waves® plugins for a higher-quality signal chain.",
+    subline: "Same routing — but engineered with Waves® plugins for a higher-quality signal chain.",
     wavesNote: "Requires Waves® plugins (sold separately — not included).",
     included: [
       "1 Main Vocal Chain (.flp — unmixed/dry routing)",
@@ -58,6 +51,9 @@ const tiers = [
     ],
     cta: "Get Basic Waves — $50 →",
   },
+};
+
+const tiers = [
   {
     name: "Pro",
     price: "$100",
@@ -115,84 +111,173 @@ const tiers = [
   },
 ];
 
-const PricingSection = () => (
-  <section id="pricing" className="py-24">
-    <div className="container mx-auto px-6">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-center mb-16"
-      >
-        <p className="font-sub text-primary uppercase tracking-widest text-sm mb-2">Pricing</p>
-        <h2 className="font-display text-5xl md:text-6xl">Pick Your Tier.</h2>
-        <p className="text-muted-foreground font-body mt-4 max-w-xl mx-auto">
-          One-time purchase. Instant download. FL Studio 20 and above.
-        </p>
-      </motion.div>
+const PricingSection = () => {
+  const [basicMode, setBasicMode] = useState<"stock" | "waves">("stock");
+  const basic = basicVariants[basicMode];
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-start">
-        {tiers.map((tier, i) => (
+  return (
+    <section id="pricing" className="py-24">
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <p className="font-sub text-primary uppercase tracking-widest text-sm mb-2">Pricing</p>
+          <h2 className="font-display text-5xl md:text-6xl">Pick Your Tier.</h2>
+          <p className="text-muted-foreground font-body mt-4 max-w-xl mx-auto">
+            One-time purchase. Instant download. FL Studio 20 and above.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-start">
+          {/* Basic Card with toggle */}
           <motion.div
-            key={tier.name}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.15 }}
-            className={`tier-accent card-orange-glow bg-card rounded-lg p-6 md:p-8 relative ${
-              tier.popular ? "ring-1 ring-primary scale-[1.02] md:scale-105" : ""
-            }`}
+            className="tier-accent card-orange-glow bg-card rounded-lg p-6 md:p-8 relative"
           >
-            <span className={`inline-block text-xs font-sub font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider ${tier.badgeClass}`}>
-              {tier.badge}
+            <span className="inline-block text-xs font-sub font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider border border-primary text-primary">
+              START HERE
             </span>
-            {tier.popular && (
-              <span className="absolute -top-3 right-6 bg-primary text-primary-foreground font-sub font-bold text-xs px-3 py-1 rounded-full">
-                ⭐ MOST POPULAR
+
+            {/* Toggle bubbles */}
+            <div className="flex gap-2 mb-5">
+              <button
+                onClick={() => setBasicMode("stock")}
+                className={`px-4 py-1.5 rounded-full text-xs font-sub font-bold transition-all duration-200 ${
+                  basicMode === "stock"
+                    ? "bg-primary text-primary-foreground shadow-lg shadow-primary/30"
+                    : "bg-muted/20 text-muted-foreground border border-border hover:border-primary/50"
+                }`}
+              >
+                FL Stock
+              </button>
+              <button
+                onClick={() => setBasicMode("waves")}
+                className={`px-4 py-1.5 rounded-full text-xs font-sub font-bold transition-all duration-200 ${
+                  basicMode === "waves"
+                    ? "bg-primary text-primary-foreground shadow-lg shadow-primary/30"
+                    : "bg-muted/20 text-muted-foreground border border-border hover:border-primary/50"
+                }`}
+              >
+                Waves Powered
+              </button>
+            </div>
+
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={basicMode}
+                initial={{ opacity: 0, y: 6 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -6 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="mb-2">
+                  <span className="text-muted-foreground line-through text-sm font-body mr-2">{basic.originalPrice}</span>
+                  <span className="text-primary font-sub text-xs font-bold">{basic.savings}</span>
+                </div>
+                <h3 className="font-display text-4xl mb-1">{basic.price}</h3>
+                <p className="text-muted-foreground text-xs mb-4 font-body">one-time payment</p>
+                <h4 className="font-sub text-lg text-foreground mb-1">{basic.headline}</h4>
+                <p className="text-muted-foreground text-sm mb-4 font-body">{basic.subline}</p>
+
+                <div className="bg-primary/10 border border-primary/20 rounded-md p-3 mb-6 text-xs text-muted-foreground font-body">
+                  ⚠ {basic.wavesNote}
+                </div>
+
+                <ul className="space-y-2 mb-6">
+                  {basic.included.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm font-body">
+                      <Check size={16} className="text-success shrink-0 mt-0.5" />
+                      <span className="text-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {basic.excluded.length > 0 && (
+                  <ul className="space-y-2 mb-6">
+                    {basic.excluded.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm font-body">
+                        <X size={16} className="text-muted-foreground shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                <button className="cta-lift w-full bg-primary text-primary-foreground font-sub font-bold py-3 rounded-lg text-base">
+                  {basic.cta}
+                </button>
+              </motion.div>
+            </AnimatePresence>
+          </motion.div>
+
+          {/* Pro & Premium Plus */}
+          {tiers.map((tier, i) => (
+            <motion.div
+              key={tier.name}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: (i + 1) * 0.15 }}
+              className={`tier-accent card-orange-glow bg-card rounded-lg p-6 md:p-8 relative ${
+                tier.popular ? "ring-1 ring-primary scale-[1.02] md:scale-105" : ""
+              }`}
+            >
+              <span className={`inline-block text-xs font-sub font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider ${tier.badgeClass}`}>
+                {tier.badge}
               </span>
-            )}
+              {tier.popular && (
+                <span className="absolute -top-3 right-6 bg-primary text-primary-foreground font-sub font-bold text-xs px-3 py-1 rounded-full">
+                  ⭐ MOST POPULAR
+                </span>
+              )}
 
-            <div className="mb-2">
-              <span className="text-muted-foreground line-through text-sm font-body mr-2">{tier.originalPrice}</span>
-              <span className="text-primary font-sub text-xs font-bold">{tier.savings}</span>
-            </div>
-            <h3 className="font-display text-4xl mb-1">{tier.price}</h3>
-            <p className="text-muted-foreground text-xs mb-4 font-body">one-time payment</p>
-            <h4 className="font-sub text-lg text-foreground mb-1">{tier.headline}</h4>
-            <p className="text-muted-foreground text-sm mb-4 font-body">{tier.subline}</p>
+              <div className="mb-2">
+                <span className="text-muted-foreground line-through text-sm font-body mr-2">{tier.originalPrice}</span>
+                <span className="text-primary font-sub text-xs font-bold">{tier.savings}</span>
+              </div>
+              <h3 className="font-display text-4xl mb-1">{tier.price}</h3>
+              <p className="text-muted-foreground text-xs mb-4 font-body">one-time payment</p>
+              <h4 className="font-sub text-lg text-foreground mb-1">{tier.headline}</h4>
+              <p className="text-muted-foreground text-sm mb-4 font-body">{tier.subline}</p>
 
-            <div className="bg-primary/10 border border-primary/20 rounded-md p-3 mb-6 text-xs text-muted-foreground font-body">
-              ⚠ {tier.wavesNote}
-            </div>
+              <div className="bg-primary/10 border border-primary/20 rounded-md p-3 mb-6 text-xs text-muted-foreground font-body">
+                ⚠ {tier.wavesNote}
+              </div>
 
-            <ul className="space-y-2 mb-6">
-              {tier.included.map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm font-body">
-                  <Check size={16} className="text-success shrink-0 mt-0.5" />
-                  <span className="text-foreground">{item}</span>
-                </li>
-              ))}
-            </ul>
-
-            {tier.excluded.length > 0 && (
               <ul className="space-y-2 mb-6">
-                {tier.excluded.map((item) => (
+                {tier.included.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-sm font-body">
-                    <X size={16} className="text-muted-foreground shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">{item}</span>
+                    <Check size={16} className="text-success shrink-0 mt-0.5" />
+                    <span className="text-foreground">{item}</span>
                   </li>
                 ))}
               </ul>
-            )}
 
-            <button className="cta-lift w-full bg-primary text-primary-foreground font-sub font-bold py-3 rounded-lg text-base">
-              {tier.cta}
-            </button>
-          </motion.div>
-        ))}
+              {tier.excluded.length > 0 && (
+                <ul className="space-y-2 mb-6">
+                  {tier.excluded.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm font-body">
+                      <X size={16} className="text-muted-foreground shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              <button className="cta-lift w-full bg-primary text-primary-foreground font-sub font-bold py-3 rounded-lg text-base">
+                {tier.cta}
+              </button>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default PricingSection;
