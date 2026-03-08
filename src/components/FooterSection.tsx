@@ -23,10 +23,6 @@ const FooterSection = () => (
           <p className="text-muted-foreground text-sm font-body mb-3">
             Engineer-built FL Studio vocal templates for independent artists. Sound professional from day one.
           </p>
-          <p className="text-muted-foreground text-xs font-body italic">
-            ZvocalShop is not affiliated with Image-Line, Waves Audio Ltd., or Focusrite plc.
-            All third-party product names are the property of their respective owners.
-          </p>
         </div>
 
         {/* Templates */}
@@ -44,11 +40,6 @@ const FooterSection = () => (
         <div>
           <h4 className="font-sub text-sm uppercase tracking-wider text-foreground mb-3">Resources</h4>
           <ul className="space-y-2 text-sm font-body text-muted-foreground">
-            <li>
-              <a href="https://www.waves.com/downloads/central" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                Download Waves Central
-              </a>
-            </li>
             <li><a href="#how-it-works" className="hover:text-primary transition-colors">How It Works</a></li>
             <li><a href="#faq" className="hover:text-primary transition-colors">FAQ</a></li>
             <li><a href="#zip-tree" className="hover:text-primary transition-colors">What's in the .zip</a></li>
@@ -65,6 +56,24 @@ const FooterSection = () => (
             <li><a href="#" className="hover:text-primary transition-colors">Terms of Use</a></li>
           </ul>
         </div>
+      </div>
+
+      {/* Legal Disclaimer */}
+      <div className="border border-border rounded-lg p-4 mb-8">
+        <p className="text-muted-foreground text-[10px] font-body leading-relaxed text-center">
+          <strong>LEGAL DISCLAIMER:</strong> ZvocalShop is an independent business and is <strong>not</strong> an authorized
+          reseller, certified seller, distributor, or official partner of Waves Audio Ltd., Image-Line, or Focusrite plc.
+          ZvocalShop sells vocal templates, setup guidance, and session time only. We do not sell, distribute, or provide
+          Waves® plugins, FL Studio® licenses, or any third-party software or hardware.
+          All third-party products referenced on this website must be purchased directly from their respective vendors.
+          ZvocalShop takes <strong>no responsibility</strong> for any issues related to the installation, activation,
+          functionality, compatibility, or performance of Waves® plugins, FL Studio®, or any other third-party software
+          or hardware on your system. If you experience issues with third-party products, please contact the respective
+          vendor's support directly. Waves®, Waves Central®, and all related names are trademarks of Waves Audio Ltd.
+          FL Studio® is a trademark of Image-Line. Focusrite® and Scarlett® are trademarks of Focusrite plc.
+          All third-party product names and trademarks are the property of their respective owners and are used here
+          for informational purposes only. Use of these names does not imply endorsement, sponsorship, or affiliation.
+        </p>
       </div>
 
       <div className="section-divider mb-6" />

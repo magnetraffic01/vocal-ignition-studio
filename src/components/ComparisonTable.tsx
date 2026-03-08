@@ -12,7 +12,7 @@ const features = [
   { label: "Hardware Shopping List", basic: false, pro: false, premium: false, diamond: true },
   { label: "Full Hardware Setup Guidance", basic: false, pro: false, premium: false, diamond: true },
   { label: "FL Studio 20+ Compatible", basic: true, pro: true, premium: true, diamond: true },
-  { label: "Waves V14 + V15 Pre-Wired", basic: true, pro: true, premium: true, diamond: true },
+  { label: "Designed for Waves® Plugins", basic: true, pro: true, premium: true, diamond: true },
   { label: "Instant .zip Download", basic: true, pro: true, premium: true, diamond: true },
   { label: "Commercial Use License", basic: true, pro: true, premium: true, diamond: true },
 ];
@@ -53,6 +53,9 @@ const ComparisonTable = () => (
             ))}
           </tbody>
         </table>
+        <p className="text-muted-foreground text-[10px] font-body mt-4 text-center italic">
+          Waves® plugins required for all tiers (sold separately). ZvocalShop is not affiliated with Waves Audio Ltd.
+        </p>
       </motion.div>
     </div>
   </section>

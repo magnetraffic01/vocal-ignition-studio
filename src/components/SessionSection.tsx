@@ -28,7 +28,7 @@ const SessionSection = () => (
           <h4 className="font-sub text-xl text-foreground mb-3">Part 1 — Installation</h4>
           <ul className="space-y-2 text-sm font-body text-muted-foreground mb-4">
             <li>→ Load .zip into FL Studio</li>
-            <li>→ Activate Waves plugins via Waves Central</li>
+            <li>→ Verify your plugins are activated and functioning</li>
             <li>→ Configure mic input and audio interface routing</li>
             <li>→ Confirm all chains functioning correctly</li>
             <li>→ Live Q&amp;A on your specific setup</li>
@@ -63,6 +63,10 @@ const SessionSection = () => (
 
       <p className="text-center text-muted-foreground text-sm font-body mb-6">
         After purchase you receive a Calendly link to schedule your session at a time that works for you.
+      </p>
+      <p className="text-center text-muted-foreground text-xs font-body mb-6 italic max-w-2xl mx-auto">
+        Note: You must have FL Studio and Waves® plugins installed before your session.
+        ZvocalShop does not provide or install third-party software — these must be purchased directly from their vendors.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center">

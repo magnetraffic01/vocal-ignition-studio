@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 const steps = [
   {
     num: "1",
-    title: "Get Waves Central",
-    desc: "Download the free Waves Central app and subscribe to a Waves plan (~$14/mo). This is the foundation that powers every template.",
+    title: "Get Your Plugins Ready",
+    desc: "Make sure you have Waves® V14/V15 plugins installed and activated on your system. These are purchased separately from Waves Audio Ltd.",
   },
   {
     num: "2",
@@ -40,7 +40,6 @@ const HowItWorksSection = () => (
       </motion.div>
 
       <div className="max-w-3xl mx-auto relative">
-        {/* Dashed connector line */}
         <div className="absolute left-6 top-8 bottom-8 w-px border-l-2 border-dashed border-primary/30 hidden md:block" />
 
         <div className="space-y-8">
