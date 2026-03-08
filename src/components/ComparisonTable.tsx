@@ -2,20 +2,20 @@ import { motion } from "framer-motion";
 import { Check, X } from "lucide-react";
 
 const features = [
-  { label: "Main Vocal Chains", basic: "1 raw", pro: "1 raw", premium: "3 mixed", diamond: "3 mixed" },
-  { label: "Dub Chains", basic: "1", pro: "2", premium: "2", diamond: "2" },
-  { label: "Adlib Chains", basic: "1", pro: "3", premium: "4", diamond: "4" },
-  { label: "Master Channel Chain", basic: false, pro: false, premium: true, diamond: true },
-  { label: "Chains Are Pre-Mixed", basic: false, pro: false, premium: true, diamond: true },
-  { label: "Uses FL Stock Plugins Only", basic: true, pro: false, premium: false, diamond: false },
-  { label: "Designed for Waves® Plugins", basic: false, pro: true, premium: true, diamond: true },
-  { label: "PDF Setup Guide", basic: false, pro: true, premium: true, diamond: true },
-  { label: "Live Session", basic: false, pro: false, premium: "1 Hour", diamond: "2 Hours" },
-  { label: "Hardware Shopping List", basic: false, pro: false, premium: false, diamond: true },
-  { label: "Full Hardware Setup Guidance", basic: false, pro: false, premium: false, diamond: true },
-  { label: "FL Studio 20+ Compatible", basic: true, pro: true, premium: true, diamond: true },
-  { label: "Instant .zip Download", basic: true, pro: true, premium: true, diamond: true },
-  { label: "Commercial Use License", basic: true, pro: true, premium: true, diamond: true },
+  { label: "Main Vocal Chains", stock: "1 raw", waves: "1 raw", pro: "1 raw", premium: "3 mixed", diamond: "3 mixed" },
+  { label: "Dub Chains", stock: "1", waves: "1", pro: "2", premium: "2", diamond: "2" },
+  { label: "Adlib Chains", stock: "1", waves: "1", pro: "3", premium: "4", diamond: "4" },
+  { label: "Master Channel Chain", stock: false, waves: false, pro: false, premium: true, diamond: true },
+  { label: "Chains Are Pre-Mixed", stock: false, waves: false, pro: false, premium: true, diamond: true },
+  { label: "Uses FL Stock Plugins Only", stock: true, waves: false, pro: false, premium: false, diamond: false },
+  { label: "Designed for Waves® Plugins", stock: false, waves: true, pro: true, premium: true, diamond: true },
+  { label: "PDF Setup Guide", stock: false, waves: false, pro: true, premium: true, diamond: true },
+  { label: "Live Session", stock: false, waves: false, pro: false, premium: "1 Hour", diamond: "2 Hours" },
+  { label: "Hardware Shopping List", stock: false, waves: false, pro: false, premium: false, diamond: true },
+  { label: "Full Hardware Setup Guidance", stock: false, waves: false, pro: false, premium: false, diamond: true },
+  { label: "FL Studio 20+ Compatible", stock: true, waves: true, pro: true, premium: true, diamond: true },
+  { label: "Instant .zip Download", stock: true, waves: true, pro: true, premium: true, diamond: true },
+  { label: "Commercial Use License", stock: true, waves: true, pro: true, premium: true, diamond: true },
 ];
 
 const Cell = ({ value }: { value: boolean | string }) => {
