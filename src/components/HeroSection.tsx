@@ -27,10 +27,8 @@ const HeroSection = () => {
 
   return (
     <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden grain-overlay pt-24">
-      {/* Radial orange glow */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,94,0,0.08)_0%,transparent_70%)]" />
 
-      {/* Animated waveform background */}
       <div className="absolute bottom-0 left-0 right-0 h-32 opacity-30">
         <div className="animate-waveform flex">
           <WaveformSVG />
@@ -45,7 +43,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           <span className="inline-block bg-secondary text-foreground font-sub font-bold text-xs px-4 py-1.5 rounded-full mb-6 uppercase tracking-wider border border-border">
-            FL Studio 20+ · Waves V14 &amp; V15
+            FL Studio 20+ · Requires Waves® Plugins (sold separately)
           </span>
           <h1 className="font-display text-[clamp(3.25rem,8vw,6.875rem)] leading-[0.9] mb-6">
             SOUND LIKE YOU<br />
@@ -57,11 +55,12 @@ const HeroSection = () => {
           <p className="font-body text-muted-foreground text-base max-w-2xl mx-auto mb-4">
             Engineer-built vocal chains for FL Studio 20 and above — Main Vocals,
             Adlibs, Dubs, and Master Channel ready to load and record.
-            Powered by Waves V14 &amp; V15. Download your .zip today. Record tonight.
+            Compatible with Waves® V14 &amp; V15 plugins (purchased separately).
+            Download your .zip today. Record tonight.
           </p>
           <p className="font-body text-foreground/60 text-xs mb-8 max-w-3xl mx-auto">
             ZvocalShop is a digital store selling FL Studio vocal templates compatible with FL Studio 20 and above including FL Studio 2025.
-            Templates are pre-built .flp files containing vocal signal chains engineered with Waves V14 and V15 plugins, including Main Vocal,
+            Templates are pre-built .flp files containing vocal signal chains designed for use with Waves® V14 and V15 plugins (sold separately), including Main Vocal,
             Adlibs, Dubs, and Master Channel configurations. Four tiers are available: Basic ($50), Pro ($100), Premium Plus ($350), and Diamond ($500).
           </p>
         </motion.div>
@@ -93,7 +92,7 @@ const HeroSection = () => {
           className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-body text-muted-foreground"
         >
           <span className="text-success">✓ FL Studio 20 &amp; 2025</span>
-          <span className="text-success">✓ Waves V14 &amp; V15</span>
+          <span className="text-success">✓ Requires Waves® Plugins</span>
           <span className="text-success">✓ Instant .zip Download</span>
           <span className="text-success">✓ 30-Day Guarantee</span>
           <span className="text-success">✓ 10,000+ Producers</span>

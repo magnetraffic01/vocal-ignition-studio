@@ -9,7 +9,7 @@ const leftItems = [
   "Organized .zip download",
   "Complete PDF Setup Guide",
   "FL Studio 20 and above compatible",
-  "Waves V14 & V15 pre-wired and pre-mixed",
+  "Designed for Waves® V14 & V15 plugins",
   "Live 2-Hour Zoom Session",
   "Calendly booking link sent immediately",
   "Personalized hardware shopping list with direct links",
@@ -19,13 +19,13 @@ const shoppingList = [
   { name: "FL Studio Producer Edition", price: "~$199", note: "purchased directly from image-line.com" },
   { name: "Focusrite Scarlett Solo Studio Pack", price: "~$120", note: "interface + condenser mic + headphones" },
   { name: "1TB External Hard Drive", price: "~$55", note: "for vocal takes, sessions & project backups" },
-  { name: "Waves Monthly Subscription", price: "~$14/mo", note: "required — purchased at waves.com/subscribe" },
+  { name: "Waves® Plugin Subscription", price: "~$14/mo", note: "required — purchased directly from Waves Audio" },
 ];
 
 const scenarios = [
   { title: "If you already own FL Studio", savings: "Save ~$199", note: "Your hardware total drops significantly" },
   { title: "If you already own an audio interface", savings: "Save ~$120", note: "Skip the Scarlett if you have a working interface" },
-  { title: "If you already have Waves", savings: "Save ~$14/mo", note: "No subscription needed — you are already set" },
+  { title: "If you already have Waves® plugins", savings: "Save ~$14/mo", note: "No additional subscription needed" },
 ];
 
 const DiamondSection = () => (
@@ -59,7 +59,7 @@ const DiamondSection = () => (
           </div>
           <h3 className="font-display text-5xl md:text-6xl text-diamond">$500</h3>
           <p className="text-muted-foreground text-xs mt-2 font-body">
-            + Hardware purchased separately (~$350–450 depending on your choices and what you already own)
+            + Hardware &amp; third-party software purchased separately (~$350–450 depending on your choices and what you already own)
           </p>
         </div>
 
@@ -68,16 +68,17 @@ const DiamondSection = () => (
         </h2>
         <p className="text-muted-foreground font-body text-sm text-center max-w-2xl mx-auto mb-6">
           Everything in Premium Plus — plus a curated hardware shopping list and a 2-hour live Zoom session
-          where we install everything together, configure your audio interface, load all templates,
+          where we help you get set up, configure your audio interface, load all templates,
           and record your first professional vocal. This is not just a product.
           It is the foundation of your entire career as a recording artist.
         </p>
 
         {/* Info note */}
         <div className="rounded-lg p-4 mb-8 text-sm font-body text-muted-foreground" style={{ border: "1px solid rgba(184,169,201,0.3)", background: "rgba(184,169,201,0.05)" }}>
-          💡 After your Diamond purchase, you receive a personalized hardware shopping list with direct purchase links.
-          You buy the hardware independently. We then schedule your 2-hour Zoom session and build everything together, live.
-          Waves subscription (~$13.99/mo) also required and purchased separately.
+          💡 After your Diamond purchase, you receive a personalized hardware shopping list.
+          You buy all hardware and third-party software independently from their respective vendors.
+          We then schedule your 2-hour Zoom session and build everything together, live.
+          Waves® plugin subscription also required and purchased separately directly from Waves Audio.
         </div>
 
         {/* Two columns */}
@@ -97,7 +98,7 @@ const DiamondSection = () => (
           <div className="rounded-lg p-5" style={{ background: "#0a0a12", border: "1px solid rgba(184,169,201,0.3)" }}>
             <h4 className="font-sub text-lg text-diamond mb-1">💎 What You'll Purchase Separately</h4>
             <p className="text-muted-foreground text-xs font-body mb-4">
-              We recommend the best products in our professional opinion.
+              These are third-party products you purchase directly from their respective vendors.
               You own every license, every piece of hardware — forever.
             </p>
             <div className="space-y-3">
@@ -117,7 +118,7 @@ const DiamondSection = () => (
                 <span className="text-diamond font-sub font-bold">~$374–450</span>
               </div>
               <p className="text-muted-foreground text-xs font-body mt-1">
-                Exact prices vary by retailer and availability. Direct purchase links sent after your Diamond purchase.
+                Prices are estimates only and vary by retailer. All products purchased directly from their respective vendors.
               </p>
             </div>
           </div>
@@ -127,15 +128,15 @@ const DiamondSection = () => (
         <div className="rounded-lg p-6 mb-8" style={{ borderLeft: "4px solid #C9B8E8", background: "rgba(184,169,201,0.05)" }}>
           <h4 className="font-sub text-lg text-foreground mb-3">📊 Why the Total Investment Varies — Read This</h4>
           <p className="text-muted-foreground text-sm font-body mb-3">
-            The hardware costs above are estimates based on our recommended products.
+            The hardware and software costs above are estimates based on publicly available pricing.
             Your actual total depends on the choices you make — which retailer you use,
             which FL Studio edition you select, and what you already own. No two setups
             cost exactly the same, and that is completely normal.
           </p>
           <p className="text-muted-foreground text-sm font-body mb-4">
-            We provide you with a personalized shopping list after your Diamond purchase with
-            direct links to the exact products we recommend at that moment in time, so you always
-            get the right version at the best available price.
+            We provide you with a personalized shopping list after your Diamond purchase.
+            You may already own one or more of these items — meaning your investment could be
+            significantly lower than the estimates shown.
           </p>
           <div className="grid sm:grid-cols-3 gap-3">
             {scenarios.map((s) => (
@@ -151,24 +152,27 @@ const DiamondSection = () => (
           </p>
         </div>
 
-        {/* Licensing */}
+        {/* Licensing Disclaimer */}
         <div className="tier-accent rounded-lg p-6 mb-8 bg-card">
-          <h4 className="font-sub text-lg text-foreground mb-3">⚖️ What ZvocalShop Provides — And What We Cannot</h4>
+          <h4 className="font-sub text-lg text-foreground mb-3">⚖️ What ZvocalShop Provides — And What We Do Not</h4>
           <p className="text-muted-foreground text-sm font-body mb-3">
-            ZvocalShop sells vocal templates, guidance, and our time. We cannot and do not provide
-            FL Studio licenses or Waves plugins as part of any purchase. FL Studio is a licensed
-            software product owned by Image-Line. Waves plugins are licensed products owned by
-            Waves Audio Ltd. Both must be purchased directly by you from their respective companies.
+            ZvocalShop sells vocal templates, setup guidance, and session time only.
+            We do not sell, distribute, resell, or provide FL Studio licenses, Waves® plugins,
+            or any third-party software or hardware as part of any purchase.
+            All third-party products must be purchased directly by you from their respective companies.
           </p>
           <p className="text-muted-foreground text-sm font-body mb-3">
-            This is not a limitation — this is the right way to do it. When you purchase your own
-            license, you own it. No one can take it away from you. We are your setup crew.
-            The tools are yours to keep forever. Our job is to guide you to the best products
-            available and show you exactly how to use them.
+            ZvocalShop is <strong className="text-foreground">not</strong> a certified seller, authorized reseller,
+            or official partner of Waves Audio Ltd., Image-Line, or Focusrite plc.
+            We take no responsibility for any issues related to the installation, activation,
+            functionality, or compatibility of any third-party plugins or software on your system.
+            If you experience issues with Waves® plugins, please contact Waves Audio Ltd. directly.
           </p>
           <p className="text-muted-foreground text-xs font-body italic">
-            ZvocalShop is not affiliated with Image-Line, Waves Audio Ltd., or Focusrite plc.
+            Waves®, Waves Central®, and all related product names are trademarks of Waves Audio Ltd.
+            FL Studio® is a trademark of Image-Line. Focusrite® and Scarlett® are trademarks of Focusrite plc.
             All third-party product names and trademarks are the property of their respective owners.
+            Use of these names is for informational purposes only and does not imply endorsement or affiliation.
           </p>
         </div>
 

@@ -12,28 +12,32 @@ const faqs = [
     a: "Yes. All ZvocalShop templates are fully compatible with FL Studio 20 and all versions above including FL Studio 2025. Any version numbered 20 or higher loads these templates correctly.",
   },
   {
-    q: "Do I need Waves plugins to use these templates?",
-    a: "Yes. Waves plugins are required for all templates to function at full capability. You must download the free Waves Central app and subscribe to a Waves plan to access the V14 and V15 plugins used in every template.",
+    q: "Do I need Waves® plugins to use these templates?",
+    a: "Yes. Waves® plugins (V14 and V15) are required for all templates to function correctly. You must purchase and install Waves plugins directly from Waves Audio Ltd. before using any ZvocalShop template. ZvocalShop does not sell, distribute, or provide Waves plugins.",
   },
   {
-    q: "What is Waves Central and how much does it cost?",
-    a: "Waves Central is the free plugin manager from Waves Audio available at waves.com/downloads/central. The app itself is always free. To unlock the plugin library you subscribe to a plan: approximately $13.99 per month or approximately $119 per year (~$9.99/month).",
+    q: "Where do I get Waves® plugins?",
+    a: "Waves plugins must be purchased directly from Waves Audio Ltd. through their official website. ZvocalShop is not an authorized reseller or distributor of Waves products. Please visit the Waves Audio website for pricing, plans, and support.",
   },
   {
     q: "What is the total cost to get started for each tier?",
-    a: "Basic: ~$64 first month ($50 template + ~$14 Waves). Pro: ~$114 ($100 + ~$14). Premium Plus: ~$364 ($350 + ~$14). Diamond: ~$864–950 total from scratch ($500 service + ~$350–450 hardware purchased separately + ~$14 Waves). After the first month only the Waves subscription renews at ~$13.99/month. All template purchases are one-time payments.",
+    a: "The ZvocalShop template prices are: Basic $50, Pro $100, Premium Plus $350, Diamond $500. In addition, you will need a Waves® plugin subscription (purchased separately from Waves Audio) and FL Studio (purchased separately from Image-Line). All ZvocalShop template purchases are one-time payments. Third-party software costs vary — please check the respective vendor websites for current pricing.",
   },
   {
     q: "What is the Diamond tier exactly?",
-    a: "Diamond is a complete from-scratch setup service. You receive everything in Premium Plus plus a personalized hardware shopping list with direct purchase links, and a 2-hour live Zoom session where we install your FL Studio, activate your Waves plugins, configure your Focusrite Scarlett audio interface, load all templates, and record your first professional vocal together. Hardware is purchased separately by you using our provided list, estimated at $350–450 total depending on what you already own.",
+    a: "Diamond is a complete from-scratch setup service. You receive everything in Premium Plus plus a personalized hardware shopping list and a 2-hour live Zoom session where we help you get set up, load all templates, and record your first professional vocal together. All hardware and third-party software (FL Studio, Waves plugins, audio interface) are purchased separately by you from their respective vendors.",
   },
   {
     q: "Why does the Diamond price vary?",
-    a: "The $500 Diamond fee covers our guidance, your complete template package, and your 2-hour live session. The additional hardware costs vary because they depend entirely on your personal choices — which retailer you buy from, which FL Studio edition you select, and whether you already own any of the items on the list. We provide direct purchase links after your Diamond purchase so you always get the right products at the best current price.",
+    a: "The $500 Diamond fee covers our template package, guidance, and your 2-hour live session. The additional hardware and software costs vary because they depend entirely on your personal choices — which retailer you buy from, which FL Studio edition you select, and whether you already own any of the required items.",
   },
   {
-    q: "Can ZvocalShop provide FL Studio or Waves plugins directly?",
-    a: "No. FL Studio is a licensed software product owned by Image-Line. Waves plugins are licensed products owned by Waves Audio Ltd. Both must be purchased directly by you from their respective companies. ZvocalShop sells templates, guidance, and session time only. When you purchase your own licenses, you own them forever.",
+    q: "Can ZvocalShop provide FL Studio or Waves® plugins directly?",
+    a: "No. ZvocalShop is not an authorized seller, reseller, or distributor of FL Studio or Waves plugins. FL Studio is owned by Image-Line. Waves plugins are owned by Waves Audio Ltd. Both must be purchased directly by you from their respective companies. ZvocalShop sells templates, guidance, and session time only.",
+  },
+  {
+    q: "What if I have issues with Waves® plugins on my system?",
+    a: "ZvocalShop takes no responsibility for any issues related to the installation, activation, functionality, or compatibility of Waves plugins or any other third-party software on your system. If you experience issues with Waves plugins, please contact Waves Audio Ltd. support directly through their official website.",
   },
   {
     q: "What is the difference between unmixed and mixed chains?",
@@ -49,7 +53,7 @@ const faqs = [
   },
   {
     q: "Do I need to own FL Studio before buying Basic, Pro, or Premium Plus?",
-    a: "Yes. These three tiers are designed for artists who already have FL Studio 20 or above installed. If you do not yet have FL Studio, the Diamond tier includes setup guidance and a purchase link to get the correct edition.",
+    a: "Yes. These three tiers are designed for artists who already have FL Studio 20 or above installed. If you do not yet have FL Studio, the Diamond tier includes setup guidance. FL Studio must be purchased directly from Image-Line.",
   },
 ];
 
