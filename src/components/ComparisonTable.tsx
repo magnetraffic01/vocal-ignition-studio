@@ -36,7 +36,7 @@ const ComparisonTable = () => (
           <thead>
             <tr className="border-b border-border">
               <th className="text-left font-sub text-foreground py-3 px-2">Feature</th>
-              <th className="text-center font-sub text-foreground py-3 px-2">Basic $50</th>
+              <th className="text-center font-sub text-foreground py-3 px-2">Basic $35</th>
               <th className="text-center font-sub text-foreground py-3 px-2">Pro $100</th>
               <th className="text-center font-sub text-foreground py-3 px-2">Premium+ $350</th>
               <th className="text-center font-sub py-3 px-2 text-diamond" style={{ background: "rgba(184,169,201,0.08)" }}>💎 Diamond $500</th>

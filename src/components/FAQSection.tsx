@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "What is the total cost to get started for each tier?",
-    a: "The ZvocalShop template prices are: Basic $50, Pro $100, Premium Plus $350, Diamond $500. In addition, you will need a Waves® plugin subscription (purchased separately from Waves Audio) and FL Studio (purchased separately from Image-Line). All ZvocalShop template purchases are one-time payments. Third-party software costs vary — please check the respective vendor websites for current pricing.",
+    a: "The ZvocalShop template prices are: Basic $35, Pro $100, Premium Plus $350, Diamond $500. The Basic tier uses only FL Studio stock plugins, so no additional plugin purchase is needed. Pro, Premium Plus, and Diamond tiers require Waves® plugins (purchased separately from Waves Audio). All ZvocalShop template purchases are one-time payments. Third-party software costs vary — please check the respective vendor websites for current pricing.",
   },
   {
     q: "What is the Diamond tier exactly?",
