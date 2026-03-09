@@ -1,18 +1,16 @@
-FROM oven/bun:1 AS builder
+FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-COPY package.json bun.lock* bun.lockb* ./
+COPY package.json package-lock.json ./
 
-RUN bun install
+RUN npm ci
 
 COPY . .
 
-RUN bun run build
+RUN npm run build
 
 FROM nginx:alpine
-
-RUN apk add --no-cache curl
 
 COPY --from=builder /app/dist /usr/share/nginx/html
 
