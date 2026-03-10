@@ -13,7 +13,7 @@ import SessionSection from "@/components/SessionSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import FooterSection from "@/components/FooterSection";
-import MusicPlayer from "@/components/MusicPlayer";
+// import MusicPlayer from "@/components/MusicPlayer";
 
 const Index = () => {
   return (
@@ -33,7 +33,7 @@ const Index = () => {
       <FAQSection />
       <CTASection />
       <FooterSection />
-      <MusicPlayer />
+      {/* <MusicPlayer /> */}
     </main>
   );
 };
