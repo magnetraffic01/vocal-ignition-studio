@@ -42,7 +42,7 @@ const FooterSection = () => (
           <ul className="space-y-2 text-sm font-body text-muted-foreground">
             <li><a href="#how-it-works" className="hover:text-primary transition-colors">How It Works</a></li>
             <li><a href="#faq" className="hover:text-primary transition-colors">FAQ</a></li>
-            <li><a href="#zip-tree" className="hover:text-primary transition-colors">What's in the .zip</a></li>
+            
           </ul>
         </div>
 

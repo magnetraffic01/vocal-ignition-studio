@@ -33,7 +33,7 @@ const Index = () => {
       <FAQSection />
       <CTASection />
       <FooterSection />
-      <MusicPlayer />
+      {/* <MusicPlayer /> */}
     </main>
   );
 };
