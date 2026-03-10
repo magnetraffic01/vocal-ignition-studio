@@ -8,7 +8,7 @@ import HowItWorksSection from "@/components/HowItWorksSection";
 import PricingSection from "@/components/PricingSection";
 import DiamondSection from "@/components/DiamondSection";
 import ComparisonTable from "@/components/ComparisonTable";
-import ZipTreeSection from "@/components/ZipTreeSection";
+// import ZipTreeSection from "@/components/ZipTreeSection";
 import SessionSection from "@/components/SessionSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
